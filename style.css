@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    border: solid 2px black;
+    display: flex;
+}
+
+.twitIcon {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.twitIcon .icon {
+    color: gold;
+    font-size: 1.3rem;
+}
+
+.hamburger .hamIcon {
+    color: black;
+    font-size: 1.3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 27px;
+}
+
+.xIcon {
+    color: black;
+    font-size: 1.3rem;
+}
+
+.navArea {
+    flex: 0 0 80%;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+    border: 2px solid black;
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+#navbar ul li {
+    list-style-type: none;
+    margin: 30px 0;
+    /* display: inline-block; */
+ } 
+
+#navbar ul li:hover {
+    text-decoration: underline;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    margin: 1.5em;
+    color: black;
+    font-size: 1.3rem;
+}
+
+#navbar:target{
+    transform: translateY(0);
+}
+
+.wrapper {
+    width: 100%;
+    height: 90vh;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.content img {
+    width: 150;
+    height: 200px;
+    margin: 5px;
+
+}
+
+.content h3 {
+    width: 75%;
+}
+
+@media screen and (min-width: 700px) {
+    #navbar {
+        position: static;
+        height: 100%;
+        width: 100%;
+        transform: translateY(0);
+        border: none;
+    }
+
+    .hamburger .hamIcon {
+        display: none;
+    }
+
+    #navbar .xIcon {
+        display: none;
+    }
+
+    #navbar ul {
+        display: flex;
+    }
+
+    #navbar ul li {
+        margin: 0 10px;
+    }
+}
